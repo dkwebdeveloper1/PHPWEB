@@ -44,7 +44,7 @@
             <li class="nav-item"><a href="https://magadhafood.azurewebsites.net/#section-contact" class="nav-link">Contact</a></li>
           </ul>
         </div>
-      </div>
+      </div>  
     </nav>
    <!-- END nav -->
 
