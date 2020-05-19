@@ -1,3 +1,12 @@
+<?php
+include_once ("config/siteStartupFunction.php");
+
+$fetchMagadhaProfile=FetchMagadhaProfile();
+
+//print_r($fetchService);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
