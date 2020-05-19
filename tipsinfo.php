@@ -35,13 +35,13 @@
 
         <div class="collapse navbar-collapse" id="site-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="http://magadhafood.com/#section-home" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="http://magadhafood.com/#section-about" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="http://magadhafood.com/#section-offer" class="nav-link">Latest Products</a></li>
-            <li class="nav-item"><a href="http://magadhafood.com/#section-menu" class="nav-link">Products</a></li>
-            <li class="nav-item"><a href="http://magadhafood.com/#section-news" class="nav-link">RECIPES</a></li>
-            <li class="nav-item"><a href="http://magadhafood.com/#section-gallery" class="nav-link">Gallery</a></li>
-            <li class="nav-item"><a href="http://magadhafood.com/#section-contact" class="nav-link">Contact</a></li>
+            <li class="nav-item active"><a href="https://magadhafood.azurewebsites.net/#section-home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="https://magadhafood.azurewebsites.net/#section-about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="https://magadhafood.azurewebsites.net/#section-offer" class="nav-link">Latest Products</a></li>
+            <li class="nav-item"><a href="https://magadhafood.azurewebsites.net/#section-menu" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="https://magadhafood.azurewebsites.net/#section-news" class="nav-link">RECIPES</a></li>
+            <li class="nav-item"><a href="https://magadhafood.azurewebsites.net/#section-gallery" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="https://magadhafood.azurewebsites.net/#section-contact" class="nav-link">Contact</a></li>
           </ul>
         </div>
       </div>
