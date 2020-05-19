@@ -9,7 +9,13 @@ session_start();
 
 //magadhadb - Database
 //mysqlappdatabase - server
-$con=mysqli_init(); mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); mysqli_real_connect($con, "mysqlappdatabase.mysql.database.azure.com", "magadhadb@mysqlappdatabase", {JULY@2011}, {magadhadb}, 3306);
+$con=mysqli_init(); 
+mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); 
+if (!mysqli_real_connect($con, "mysqlappdatabase.mysql.database.azure.com", "magadhadb@mysqlappdatabase", "JULY@2011", "magadhadb", 3306))
+  {
+  die("Connect Error: " . mysqli_connect_error());
+  }
+
 
 $PHPSESSID=session_id();
 
