@@ -1,5 +1,5 @@
 <?php
-include_once('lib.dbconnection.php');
+include_once('dbconfig.php');
 
 //ini_set('display_errors',1);
 //error_reporting(E_ALL);
