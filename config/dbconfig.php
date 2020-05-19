@@ -1,44 +1,29 @@
 <?php
-session_start();
+$host = 'mysqlappdatabase.mysql.database.azure.com';
+$username = 'magadhadb@mysqlappdatabase';
+$password = 'JULY@2011';
+$db_name = 'mysqlappdatabase';
 
-// Create connection
-//$dbhost="magadhagroups.com.mysql";
-//$dbuser="magadhagroups_com";    // specify the sever details for mysql
-//$dbpass="kyHmWrtu";
-//$dbname="magadhagroups_com";
+//Establishes the connection
+$conn = mysqli_init();
+mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
+if (mysqli_connect_errno($conn)) {
+die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
 
-//magadhadb - Database
-//mysqlappdatabase - server
-$con=mysqli_init(); 
-mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); 
-if (!mysqli_real_connect($con, "mysqlappdatabase.mysql.database.azure.com", "magadhadb@mysqlappdatabase", "JULY@2011", "magadhadb", 3306))
-  {
-  die("Connect Error: " . mysqli_connect_error());
-  }
+// Run the create table query
+if (mysqli_query($conn, '
+CREATE TABLE Products (
+`Id` INT NOT NULL AUTO_INCREMENT ,
+`ProductName` VARCHAR(200) NOT NULL ,
+`Color` VARCHAR(50) NOT NULL ,
+`Price` DOUBLE NOT NULL ,
+PRIMARY KEY (`Id`)
+);
+')) {
+printf("Table created\n");
+}
 
-
-$PHPSESSID=session_id();
-
-
-$dbipname=$_SERVER['REMOTE_ADDR'];
-
-////// Enter Database Server //////
-define("DATABASE_SERVER",$dbhost);
-
-////// Enter Database Name //////
-define("DATABASE_NAME",$dbname);
-
-////// Enter Database UserName /////
-define("DATABASE_USERNAME",$dbuser);
-
-////// Enter IP Database Name //////
-define("IP_DATABASE_NAME",$dbipname);
-
-////// Enter Database password //////
-define("DATABASE_PASSWORD",$dbpass);
-
-
-////// Enter Database password //////
-define("PHPSESSID",$PHPSESSID);
-  
+//Close the connection
+mysqli_close($conn);
 ?>
